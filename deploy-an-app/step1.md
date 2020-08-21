@@ -46,5 +46,3 @@ instructions from the <a href="/docs/tutorials/hello-minikube/">Hello Minikube t
 <p>
 
 <p>Now that you know what Deployments are, let's go to the online tutorial and deploy our first app!</p>
-          
-        <br>

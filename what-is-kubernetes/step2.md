@@ -1,8 +1,9 @@
 <h2>Kubernetes Basics</h2>
 
-<h5>1. Create a Kubernetes cluster</h5>
-<h5>2. Deploy an app</h5>
-<h5>3. Explore your app</h5>
-<h5>4. Expose your app publicly</h5>
-<h5>5. Scale up your app</h5>
-<h5>6. Update your app</h5>
+We already installed Kubernetes for you. Check that it is properly installed, by running the _Kubectl version_ command:
+
+`kubectl version`{{execute}}
+
+Let’s view the cluster details. We’ll do that by running _kubectl cluster-info_:
+
+`kubectl cluster-info`{{execute}}

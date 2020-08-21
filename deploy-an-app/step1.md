@@ -1,24 +1,96 @@
-<h2>Kubernetes Basics</h2>
+<h3>Objectives</h3>
+                <ul>
+                    <li>Learn about application Deployments.</li>
+                    <li>Deploy your first app on Kubernetes with kubectl.</li>
+                </ul>
+            </div>
 
-[Smooth Sailing with Kubernetes](https://cloud.google.com/kubernetes-engine/kubernetes-comic)
+            <div class="col-md-8">
+                <h3>Kubernetes Deployments</h3>
+                <p>
+                Once you have a running Kubernetes cluster, you can deploy your containerized applications on top of it.
+                To do so, you create a Kubernetes <b>Deployment</b> configuration. The Deployment instructs Kubernetes
+                how to create and update instances of your application. Once you've created a Deployment, the Kubernetes
+                master schedules the application instances included in that Deployment to run on individual Nodes in the
+                cluster.
+                </p>
 
-<p>This tutorial provides a walkthrough of the basics of the Kubernetes cluster orchestration system. Each module contains some background information on major Kubernetes features and concepts, and includes an interactive online tutorial. These interactive tutorials let you manage a simple cluster and its containerized applications for yourself.</p>
-<p>Using the interactive tutorials, you can learn to:</p>
-<ul>
-<li>Deploy a containerized application on a cluster.</li>
-<li>Scale the deployment.</li>
-<li>Update the containerized application with a new software version.</li>
-<li>Debug the containerized application.</li>
-</ul>
-<p>The tutorials use Katacoda to run a virtual terminal in your web browser that runs Kubernetes. There's no need to install any software or configure anything; each interactive tutorial runs directly out of your web browser itself.</p>
-<br>
+                <p>Once the application instances are created, a Kubernetes Deployment Controller continuously monitors those instances. If the Node hosting an instance goes down or is deleted, the Deployment controller replaces the instance with an instance on another Node in the cluster. <b>This provides a self-healing mechanism to address machine failure or maintenance.</b></p>
 
-<h2>What can Kubernetes do for you?</h2>
-<p>With modern web services, users expect applications to be available 24/7, and developers expect to deploy new versions of those applications several times a day. Containerization helps package software to serve these goals, enabling applications to be released and updated in an easy and fast way without downtime. Kubernetes helps you make sure those containerized applications run where and when you want, and helps them find the resources and tools they need to work. Kubernetes is a production-ready, open source platform designed with Google's accumulated experience in container orchestration, combined with best-of-breed ideas from the community.</p>
+                <p>In a pre-orchestration world, installation scripts would often be used to start applications, but they did not allow recovery from machine failure.  By both creating your application instances and keeping them running across Nodes, Kubernetes Deployments provide a fundamentally different approach to application management. </p>
 
-<h5>1. Create a Kubernetes cluster</h5>
-<h5>2. Deploy an app</h5>
-<h5>3. Explore your app</h5>
-<h5>4. Expose your app publicly</h5>
-<h5>5. Scale up your app</h5>
-<h5>6. Update your app</h5>
+            </div>
+
+            <div class="col-md-4">
+                <div class="content__box content__box_lined">
+                    <h3>Summary:</h3>
+                    <ul>
+                        <li>Deployments</li>
+                        <li>Kubectl</li>
+                    </ul>
+                </div>
+                <div class="content__box content__box_fill">
+                    <p><i>
+                        A Deployment is responsible for creating and updating instances of your application
+                    </i></p>
+                </div>
+            </div>
+        </div>
+        <br>
+
+        <div class="row">
+            <div class="col-md-8">
+                <h2 style="color: #3771e3;">Deploying your first app on Kubernetes</h2>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-8">
+                <p><img src="/docs/tutorials/kubernetes-basics/public/images/module_02_first_app.svg"></p>
+            </div>
+        </div>
+        <br>
+
+        <div class="row">
+            <div class="col-md-8">
+
+                <p>You can create and manage a Deployment by using the Kubernetes command line interface, <b>Kubectl</b>. Kubectl uses the Kubernetes API to interact with the cluster. In this module, you'll learn the most common Kubectl commands needed to create Deployments that run your applications on a Kubernetes cluster.</p>
+
+                <p>When you create a Deployment, you'll need to specify the container image for your application and the number of replicas that you want to run. You can change that information later by updating your Deployment; Modules <a href="/docs/tutorials/kubernetes-basics/scale/scale-intro/">5</a> and <a href="/docs/tutorials/kubernetes-basics/update/update-intro/">6</a> of the bootcamp discuss how you can scale and update your Deployments.</p>
+
+
+
+
+            </div>
+            <div class="col-md-4">
+                <div class="content__box content__box_fill">
+                    <p><i> Applications need to be packaged into one of the supported container formats in order to be deployed on Kubernetes </i></p>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-8">
+              <p>
+                For your first Deployment, you'll use a Node.js application packaged in a Docker container. (If you didn't already try creating a
+                  Node.js application and deploying it using a container, you can do that first by following the
+                  instructions from the <a href="/docs/tutorials/hello-minikube/">Hello Minikube tutorial</a>).
+              <p>
+
+               <p>Now that you know what Deployments are, let's go to the online tutorial and deploy our first app!</p>
+            </div>
+        </div>
+        <br>
+
+        <div class="row">
+            <div class="col-md-12">
+                <a class="btn btn-lg btn-success" href="/docs/tutorials/kubernetes-basics/deploy-app/deploy-interactive/" role="button">Start Interactive Tutorial <span class="btn__next">›</span></a>
+            </div>
+        </div>
+
+    </main>
+
+</div>
+
+</body>
+</html>

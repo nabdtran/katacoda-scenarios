@@ -1,13 +1,14 @@
-Like minikube, kubectl comes installed in the online terminal. Type kubectl in the terminal to see its usage. The common format of a kubectl command is: kubectl action resource. This performs the specified action (like create, describe) on the specified resource (like node, container). You can use --help after the command to get additional info about possible parameters (kubectl get nodes --help).
+Let’s deploy our first app on Kubernetes with the kubectl create deployment command. We need to provide the deployment name and app image location (include the full repository url for images hosted outside Docker hub).
 
-Check that kubectl is configured to talk to your cluster, by running the kubectl version command:
+kubectl create deployment kubernetes-bootcamp --image=gcr.io/google-samples/kubernetes-bootcamp:v1{{execute}}
 
-kubectl version{{execute}}
+Great! You just deployed your first application by creating a deployment. This performed a few things for you:
 
-OK, kubectl is installed and you can see both the client and the server versions.
+searched for a suitable node where an instance of the application could be run (we have only 1 available node)
+scheduled the application to run on that Node
+configured the cluster to reschedule the instance on a new Node when needed
+To list your deployments use the get deployments command:
 
-To view the nodes in the cluster, run the kubectl get nodes command:
+kubectl get deployments{{execute}}
 
-kubectl get nodes{{execute}}
-
-Here we see the available nodes (1 in our case). Kubernetes will choose where to deploy our application based on Node available resources.
+We see that there is 1 deployment running a single instance of your app. The instance is running inside a Docker container on your node.

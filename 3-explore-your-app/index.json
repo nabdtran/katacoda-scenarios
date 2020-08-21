@@ -1,12 +1,11 @@
 {
-  "title": "Module 5 - Scale up your app",
-  "description": "Scale up your app",
+  "title": "Module 3 - Explore your app",
+  "description": "Explore your app",
   "pathwayTitle": "Kubernetes Bootcamp",
   "backend": {
     "port": 30000,
     "dockerimage": "minikube-running"
   },
-  "files": ["App"],
   "environment": {
     "uilayout": "terminal",
     "hideintro": false,
@@ -15,17 +14,21 @@
   "details": {
     "steps": [
       {
-        "title": "Step 1: Scaling a deployment",
+        "title": " Step 1 Check application configuration",
         "code": "foreground.sh",
         "text": "step1.md"
       },
       {
-        "title": "Step 2: Load Balancing",
+        "title": "Step 2 Show the app in the terminal",
         "text": "step2.md"
       },
       {
-        "title": "Step 3: Scale Down",
+        "title": "Step 3 View the container logs",
         "text": "step3.md"
+      },
+      {
+        "title": "Step 4 Executing command on the container ",
+        "text": "step4.md"
       }
     ],
     "intro": {

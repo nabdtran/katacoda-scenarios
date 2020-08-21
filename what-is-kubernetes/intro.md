@@ -1,6 +1,6 @@
 Welcome to your first Katacoda Scenario!
 
-By the end of this course you will understand how you can use Kubernetes to:
+By the end of this course you will be able to use Kubernetes to:
 
 1. Deploy a containerized application on a cluster.
 2. Scale the deployment.

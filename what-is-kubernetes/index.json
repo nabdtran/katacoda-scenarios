@@ -3,7 +3,7 @@
   "description": "Create a Kubernetes cluster",
   "backend": {
     "port": 30000,
-    "imageid": "minikube"
+    "imageid": "kubernetes"
   },
   "difficulty": "beginner",
   "time": "10 minutes",

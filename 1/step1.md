@@ -1,6 +1,6 @@
 We already installed minikube for you. Check that it is properly installed, by running the _minikube version_ command:
 
-`minikube version`{{execute}}
+`kubectl version`{{execute}}
 
 OK, we can see that minikube is in place.
 

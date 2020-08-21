@@ -1,4 +1,7 @@
 <h2>Kubernetes Basics</h2>
+
+[https://cloud.google.com/kubernetes-engine/kubernetes-comic](Smooth Sailing with Kubernetes)
+
 <p>This tutorial provides a walkthrough of the basics of the Kubernetes cluster orchestration system. Each module contains some background information on major Kubernetes features and concepts, and includes an interactive online tutorial. These interactive tutorials let you manage a simple cluster and its containerized applications for yourself.</p>
 <p>Using the interactive tutorials, you can learn to:</p>
 <ul>

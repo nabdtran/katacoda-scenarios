@@ -7,7 +7,7 @@
     "dockerimage": "minikube-running"
   },
   "environment": {
-    "uilayout": "terminal",
+    "uilayout": "terminal-terminal",
     "hideintro": false,
     "hidefinish": false
   },
